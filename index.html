@@ -15,7 +15,57 @@
         <div class="animate-spin rounded-full h-12 w-12 border-4 border-indigo-100 border-t-indigo-600"></div>
     </div>
 
+    <section id="login-section" class="h-full flex flex-col items-center justify-center p-4">
+        <div class="bg-white p-10 rounded-2xl shadow-xl w-full max-w-[440px] border border-gray-100">
+            <div class="text-center mb-8 flex flex-col items-center">
+                <img src="./assets/github-logo.png" alt="GitHub" class="w-16 h-16 mb-4 object-contain opacity-90">
+                <h1 class="text-2xl font-bold text-gray-900 tracking-tight">GitHub Issues Tracker</h1>
+                <p class="text-gray-500 text-sm mt-2">Sign in to manage your issues</p>
+            </div>
 
-    <script src="./script.js"></script>
+            <form id="login-form" class="space-y-5">
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1.5">Username</label>
+                    <input type="text" id="username" placeholder="Enter Username" 
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 outline-none transition shadow-sm placeholder-gray-400">
+                    <p class="text-xs text-[#4A00FF] mt-1.5 font-medium">Default: admin</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-gray-700 mb-1.5">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" 
+                        class="w-full px-4 py-2.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-indigo-600 focus:border-indigo-600 outline-none transition shadow-sm placeholder-gray-400">
+                    <p class="text-xs text-[#4A00FF] mt-1.5 font-medium">Default: admin123</p>
+                </div>
+
+                <div id="login-error" class="text-red-500 text-sm text-center font-medium hidden bg-red-50 py-2 rounded">Invalid credentials</div>
+
+                <button type="submit" 
+                    class="w-full bg-[#4A00FF] hover:bg-indigo-700 text-white font-semibold py-3 rounded-lg transition duration-200 shadow-md hover:shadow-lg transform active:scale-[0.99]">
+                    Sign In
+                </button>
+            </form>
+
+            <div class="relative my-8">
+                <div class="absolute inset-0 flex items-center">
+                    <div class="w-full border-t border-gray-200"></div>
+                </div>
+                <div class="relative flex justify-center text-xs uppercase tracking-wide">
+                    <span class="px-3 bg-white text-gray-400 font-medium">OR</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-xl text-center text-sm border border-gray-100">
+                <p class="text-gray-500 mb-2 font-medium">Demo Credentials:</p>
+                <div class="flex flex-col gap-1 text-gray-800">
+                    <p>Username: <span class="font-bold">admin</span></p>
+                    <p>Password: <span class="font-bold">admin123</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="dashboard-section" class="hidden"></section>
+    <script type="module" src="./script.js"></script>
+
 </body>
 </html>
